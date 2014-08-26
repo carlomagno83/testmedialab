@@ -1,0 +1,31 @@
+<?php
+
+ $title = 'Tweets';
+ $this->headTitle($title);
+ ?>
+ <h1><?php echo $this->escapeHtml($title); ?></h1>
+
+
+<table class="table table-striped table-bordered responsive no-m" data-sortable>
+    <thead>
+        <tr>
+            <th>FECHA</th>
+            <th>Imagen</th>
+            <th>Name</th>
+            <th>Tweet</th>            
+        </tr>
+    </thead>
+    <tbody>
+
+	 <?php foreach ($tweets as $tweet) : ?>
+	 <tr>
+	     <td><?php echo $this->escapeHtml($tweet['FECHA']);?></td>
+	     <td><a href='https://twitter.com/<?php echo $tweet['screen_name'] ?>' target=_blank><img src=<?php echo $tweet['url_imagen'] ?>></img></a>
+	     </td>
+	     <td><?php echo $tweet['screen_name'] ?></td>	     
+	     <td><?php echo $this->escapeHtml($tweet['tweet']);?></td>	     	     
+	 </tr>
+	 <?php endforeach; ?>
+        
+    </tbody>
+</table>

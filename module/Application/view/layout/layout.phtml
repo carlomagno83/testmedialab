@@ -1,0 +1,213 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <!-- /meta -->
+
+    <title>Test Medialab Mario</title>
+
+    <!-- page level plugin styles -->
+    <link rel="stylesheet" href="<?php echo $this->basePath()?>/plugins/table-sortable/theme.css">
+    <!-- /page level plugin styles -->
+
+    <!-- core styles -->
+    <link rel="stylesheet" href="<?php echo $this->basePath()?>/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $this->basePath()?>/css/font-awesome.css">
+    <link rel="stylesheet" href="<?php echo $this->basePath()?>/css/themify-icons.css">
+    <link rel="stylesheet" href="<?php echo $this->basePath()?>/css/animate.min.css">
+    <!-- /core styles -->
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="<?php echo $this->basePath()?>/css/skins/palette.css">
+    <link rel="stylesheet" href="<?php echo $this->basePath()?>/css/fonts/font.css">
+    <link rel="stylesheet" href="<?php echo $this->basePath()?>/css/main.css">
+    <!-- template styles -->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- load modernizer -->
+    <script src="<?php echo $this->basePath()?>/plugins/modernizr.js"></script>
+
+</head>
+
+<!-- body -->
+
+<body>
+    <div class="app">
+        <!-- top header -->
+        <header class="header header-fixed navbar">
+
+            <div class="brand">
+                <!-- toggle offscreen menu -->
+                <a href="javascript:;" class="ti-menu off-left visible-xs" data-toggle="offscreen" data-move="ltr"></a>
+                <!-- /toggle offscreen menu -->
+
+                <!-- logo -->
+                <a href="<?php echo $this->basePath()?>/usuario" class="navbar-brand">
+                    <img src="<?php echo $this->basePath()?>/img/logo.png" alt="">
+                    <span class="heading-font">
+                        MediaLab
+                    </span>
+                </a>
+                <!-- /logo -->
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li class="hidden-xs">
+                    <!-- toggle small menu -->
+                    <a href="javascript:;" class="toggle-sidebar">
+                        <i class="ti-menu"></i>
+                    </a>
+                    <!-- /toggle small menu -->
+                </li>
+                <li class="header-search">
+                    <!-- toggle search -->
+                    <a href="javascript:;" class="toggle-search">
+                        <i class="ti-search"></i>
+                    </a>
+                    <!-- /toggle search -->
+                    <div class="search-container">
+                        <form role="search">
+                            <input type="text" class="form-control search" placeholder="type and press enter">
+                        </form>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+
+                <li class="off-right">
+                    <a href="<?php echo $this->basePath()?>/usuario/cerrar">
+                        <img src="<?php echo $this->basePath()?>/img/avatar.jpg" class="header-avatar img-circle" alt="user" title="user">
+                        <span class="hidden-xs ml10">Salir</span>
+                        <i class="ti-angle-down ti-caret hidden-xs"></i>
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <!-- /top header -->
+
+        <section class="layout">
+            <!-- sidebar menu -->
+            <aside class="sidebar offscreen-left">
+                <!-- main navigation -->
+                <nav class="main-navigation" data-height="auto" data-size="6px" data-distance="0" data-rail-visible="true" data-wheel-step="10">
+                    <p class="nav-title">MENU</p>
+                    <ul class="nav">
+                        <!-- dashboard -->
+                        <li>
+                            <a href="<?php echo $this->basePath()?>/usuario">
+                                <i class="ti-home"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <!-- /dashboard -->
+
+                    </ul>
+                    <p class="nav-title">LABELS</p>
+                    <ul class="nav">
+                        <li>
+                            <a href="javascript:;">
+                                <i class="ti-control-record text-warning"></i>
+                                <span>Projects</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <i class="ti-control-record text-success"></i>
+                                <span>Apps</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <i class="ti-control-record text-danger"></i>
+                                <span>Support</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </aside>
+            <!-- /sidebar menu -->
+
+            <!-- main content -->
+            <section class="main-content">
+
+                <!-- content wrapper -->
+                <div class="content-wrap">
+
+                    <!-- inner content wrapper -->
+                    <div class="wrapper">
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="javascript:;"><i class="ti-home mr5"></i>Dashboard</a>
+                            </li>
+
+                            <li class="active">Usuarios</li>
+                        </ol>
+
+
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <section class="panel no-b">
+                                    <header class="panel-heading no-b">
+                                        <h5>Sortable <b>Table</b></h5>
+                                    </header>
+                                    <div class="panel-body">
+                                        <div class="table-responsive">
+
+                                            <?php echo $this->content; ?>
+
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /inner content wrapper -->
+
+                </div>
+                <!-- /content wrapper -->
+                <a class="exit-offscreen"></a>
+            </section>
+            <!-- /main content -->
+        </section>
+
+    </div>
+
+    <!-- core scripts -->
+    <script src="<?php echo $this->basePath()?>/plugins/jquery-1.11.1.min.js"></script>
+    <script src="<?php echo $this->basePath()?>/bootstrap/js/bootstrap.js"></script>
+    <script src="<?php echo $this->basePath()?>/plugins/jquery.slimscroll.min.js"></script>
+    <script src="<?php echo $this->basePath()?>/plugins/jquery.easing.min.js"></script>
+    <script src="<?php echo $this->basePath()?>/plugins/appear/jquery.appear.js"></script>
+    <script src="<?php echo $this->basePath()?>/plugins/jquery.placeholder.js"></script>
+    <!-- /core scripts -->
+
+    <!-- page level scripts -->
+    <script src="<?php echo $this->basePath()?>/plugins/table-sortable/sortable.min.js"></script>
+    <!-- /page level scripts -->
+
+    <!-- template scripts -->
+    <script src="<?php echo $this->basePath()?>/js/offscreen.js"></script>
+    <script src="<?php echo $this->basePath()?>/js/main.js"></script>
+    <!-- /template scripts -->
+
+    <!-- page script -->
+    <!-- /page script -->
+
+</body>
+<!-- /body -->
+
+</html>
+
+
+

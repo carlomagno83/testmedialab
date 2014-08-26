@@ -1,0 +1,31 @@
+<?php
+
+ $title = 'Usuarios';
+ $this->headTitle($title);
+ ?>
+ <h1><?php echo $this->escapeHtml($title); ?></h1>
+
+
+<table class="table table-striped table-bordered responsive no-m" data-sortable>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombres</th>
+            <th>Tweets</th>
+        </tr>
+    </thead>
+    <tbody>
+
+	 <?php foreach ($usuarios as $usuario) : ?>
+	 <tr>
+	     <td><?php echo $this->escapeHtml($usuario->id);?></td>
+	     <td><?php echo $this->escapeHtml($usuario->nombres);?></td>
+	     <td>
+	         <a href="<?php echo $this->url('usuario',array('action'=>'tweets', 'id' =>$usuario->usuario_twitter));?>">Ver tweets</a>
+	     </td>
+	 </tr>
+	 <?php endforeach; ?>
+        
+    </tbody>
+</table>
+

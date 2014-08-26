@@ -1,0 +1,51 @@
+<?php
+
+$this->headTitle("Nuevo usuario");
+$form = $this->form;
+$form->prepare();
+echo $this->form()->openTag($form);
+?>
+
+<div class="form_element">
+<?php
+
+    $nombres = $form->get('nombres');
+    echo "Nombres y Apellidos: ".$this->formInput($nombres);
+
+?>
+</div>
+
+
+<div class="form_element">
+<?php
+
+    $usuario_twitter = $form->get('usuario_twitter');
+    echo "Usuario de Twitter: ".$this->formInput($usuario_twitter);
+
+?>
+</div>
+
+
+<div class="form_element">
+<?php
+
+    $correo = $form->get('correo');
+    echo "Correo: ".$this->formInput($correo);
+
+    if(isset($error["correo"])){
+
+    	echo $error["correo"]['emailAddressInvalidHostname'];
+
+    }
+
+?>
+</div>
+
+
+<?php
+
+echo $this->flashMessenger()->render();
+echo $this->formElement($form->get('submit'));
+echo $this->form()->closeTag();
+
+
